@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <style>
+      /*   Styleing for the table */
+      body {
+        background-color: #84ecf5; /* Set your desired background color */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+        margin: 0;
+      }
+      /* contorls the color for palyer x */
+      .playerX {
+        color: #0432ec;
+      }
+
+      .playerO {
+        color: #35bc1c;
+      }
+      table {
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+
+      td {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        border: 3px dashed #0d0c0c;
+      }
+
+      h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      #game-result-alert {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-100%, -100%);
+        z-index: 1000;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="playerTurn">It's X's turn</h2>
+
+    <table id="ticTacToeGrid">
+      <tr>
+        <td onclick="handleCellClick(this)"></td>
+        <td onclick="handleCellClick(this)"></td>
+        <td onclick="handleCellClick(this)"></td>
+      </tr>
+      <tr>
+        <td onclick="handleCellClick(this)"></td>
+        <td onclick="handleCellClick(this)"></td>
+        <td onclick="handleCellClick(this)"></td>
+      </tr>
+      <tr>
+        <td onclick="handleCellClick(this)"></td>
+        <td onclick="handleCellClick(this)"></td>
+        <td onclick="handleCellClick(this)"></td>
+      </tr>
+    </table>
+
+    <button class="btn btn-dark" onclick="restartGame()">Restart Game</button>
+
+    <!-- Bootstrap Alert for Game Result -->
+    <div
+      id="game-result-alert"
+      class="alert alert-dismissible fade show"
+      role="alert"
+    >
+      <strong id="game-result-text"></strong>
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- <script src="java.js"></script> -->
+
+    <script src="java.js"></script>
+  </body>
+</html>
