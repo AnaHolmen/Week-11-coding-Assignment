@@ -1,7 +1,7 @@
 // how to  let current player play.
 let currentPlayer = "X";
 
-// Function to let a  handle cell click/checker for winter or full board and display results
+// Function to let a  handle cell click/checker for winner or full board and display results
 function handleCellClick(cell) {
   if (cell.innerHTML === "") {
     cell.className = `player${currentPlayer}`;
